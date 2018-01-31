@@ -5,6 +5,7 @@ package main
 import (
 	"context"
 	"flag"
+	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
@@ -14,6 +15,7 @@ import (
 	"github.com/labstack/echo/middleware"
 
 	"github.com/adampresley/logrusviewer/cmd/logrusviewer/controllers"
+	"github.com/adampresley/logrusviewer/cmd/logrusviewer/www"
 	"github.com/adampresley/logrusviewer/pkg/logging"
 	"github.com/adampresley/logrusviewer/pkg/ui"
 	"github.com/sirupsen/logrus"
@@ -45,6 +47,7 @@ func main() {
 	setupControllers()
 
 	handlers = echo.New()
+	handlers.Renderer = renderer
 	handlers.Logger = kit.MiddlewareLogger{logger.Logger}
 	handlers.HideBanner = true
 	handlers.Use(kit.HookWithExisting(logger))
@@ -54,7 +57,19 @@ func main() {
 		handlers.Debug = true
 	}
 
+	assetHandler := http.FileServer(www.FS(DEBUG_ASSETS))
+	handlers.GET("/www/*", echo.WrapHandler(assetHandler))
+
 	handlers.GET("/", viewerController.ViewEntries)
+	handlers.GET("/selectlogfile", viewerController.SelectLogFile)
+
+	go func() {
+		var err error
+
+		if err = handlers.Start(*host); err != nil {
+			logger.Infof("Shutting down the server...")
+		}
+	}()
 
 	quit := make(chan os.Signal)
 	signal.Notify(quit, os.Interrupt, syscall.SIGQUIT)

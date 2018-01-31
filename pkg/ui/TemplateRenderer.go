@@ -4,19 +4,18 @@ import (
 	"fmt"
 	"html/template"
 	"io"
-	"io/ioutil"
-	"os"
 	"path/filepath"
 	"strings"
 
-	"github.com/mailslurper/mailslurper/cmd/mailslurper/www"
-
+	"github.com/adampresley/logrusviewer/cmd/logrusviewer/www"
 	"github.com/labstack/echo"
-
-	"github.com/logrusviewer/cmd/logrusviewer/www"
 )
 
 var templates map[string]*template.Template
+var pageList = []string{
+	"viewer.gohtml",
+	"selectLogFile.gohtml",
+}
 
 /*
 TemplateRenderer describes a handlers for rendering layouts/pages
@@ -47,23 +46,13 @@ func (t *TemplateRenderer) Render(w io.Writer, name string, data interface{}, ct
 }
 
 func (t *TemplateRenderer) LoadTemplates(debugMode bool) {
-	var files []os.FileInfo
-	var err error
-
 	templates = make(map[string]*template.Template)
 
-	if files, err = ioutil.ReadDir("/www/logrusviewer/pages"); err != nil {
-		panic("Error reading pages directory")
-	}
+	for _, fileName := range pageList {
+		trimmedName := strings.TrimSuffix(fileName, filepath.Ext(fileName))
 
-	for _, file := range files {
-		if !file.IsDir() {
-			basename := file.Name()
-			trimmedName := strings.TrimSuffix(basename, filepath.Ext(basename))
-
-			templates["mainLayout:"+trimmedName], _ = template.Must(
-				template.New("layout").Parse(www.FSMustString(debugMode, "/www/logrusviewer/layouts/mainLayout.gohtml")),
-			).Parse(www.FSMustString(debugMode, "/www/logrusviewer/pages/"+basename))
-		}
+		templates["mainLayout:"+trimmedName], _ = template.Must(
+			template.New("layout").Parse(www.FSMustString(debugMode, "/www/logrusviewer/layouts/mainLayout.gohtml")),
+		).Parse(www.FSMustString(debugMode, "/www/logrusviewer/pages/"+fileName))
 	}
 }

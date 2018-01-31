@@ -49,8 +49,8 @@ header table {
 
 	/* sticky footer */
 	box-sizing: border-box;
-	margin-bottom: -100px;
-	padding-bottom: 100px;
+	margin-bottom: -50px;
+	padding-bottom: 50px;
 }
 
 
@@ -59,8 +59,8 @@ header table {
  */
 footer {
 	box-sizing: border-box;
-	height: 100px;
+	height: 50px;
 	background-color: #eee;
 	border-top: 1px solid #e0e0e0;
-	padding-top: 35px;
+	padding-top: 15px;
 }

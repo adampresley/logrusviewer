@@ -38,3 +38,17 @@ func (c *ViewerController) ViewEntries(ctx echo.Context) error {
 
 	return ctx.Render(http.StatusOK, "mainLayout:viewer", viewState)
 }
+
+/*
+SelectLogFile presents the user with a form to select a log file
+to parse
+
+	GET: /selectlogfile
+*/
+func (c *ViewerController) SelectLogFile(ctx echo.Context) error {
+	viewState := &ui.ViewState{
+		Title: "Select Log File",
+	}
+
+	return ctx.Render(http.StatusOK, "mainLayout:selectLogFile", viewState)
+}
