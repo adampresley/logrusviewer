@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Logrus Viewer display logrus log entries" />
+	<meta name="author" content="Adam Presley <adam@adampresley.com>" />
+
+	<title>{{.Title}} // Logrus Viewer</title>
+
+	<link href="/www/mui/css/mui.min.css" rel="stylesheet" type="text/css" />
+	<link href="/www/logrusviewer/css/style.css" rel="stylesheet" type="text/css" />
+	{{template "css" .}}
+</head>
+<body>
+	<header class="mui-appbar mui--z1">
+		<div class="mui-container">
+			<table>
+				<tr class="mui--appbar-height">
+					<td class="mui--text-title" style="width: 20%;">
+						<a href="/">Logrus Viewer</a>
+					</td>
+					<td class="mui--text-right" style="width: 80%;">
+						<ul class="mui-list--inline mui--text-body2">
+							<li><a href="/load">Load</a></li>
+						</ul>
+					</td>
+			</table>
+		</div>
+	</header>
+
+	<div id="content-wrapper">
+		<div class="mui--appbar-height"></div>
+		<br /><br />
+
+		{{template "body" .}}
+	</div>
+
+	<footer>
+		<div class="mui-container mui--text-center">
+			&copy; 2018 Adam Presley - <a href="https://github.com/adampresley/logrusviewer">View on Github</a>
+		</div>
+	</footer>
+
+	<script src="/www/npo/npo.js"></script>
+	<script src="/www/handlebars/handlebars-v4.0.11.js"></script>
+	<script type="text/javascript" src="/www/mui/js/mui.min.js"></script>
+	{{template "js" .}}
+</body>
+</html>
