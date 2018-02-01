@@ -52,7 +52,7 @@ func (p *LogrusJSONParser) Parse(contents io.Reader) (logfiles.ParsedLogFile, er
 	for scanner.Scan() {
 		line++
 
-		if logEntry, err = logfiles.NewParsedLogEntryFromJSON(scanner.Bytes()); err != nil {
+		if logEntry, err = logfiles.NewParsedLogEntryFromJSON(scanner.Bytes(), line); err != nil {
 			return result, errors.Wrapf(ErrInvalidFormat, "Error parsing line %d from log file in LogrusJSONParser", line)
 		}
 
@@ -60,6 +60,7 @@ func (p *LogrusJSONParser) Parse(contents io.Reader) (logfiles.ParsedLogFile, er
 			return result, errors.Wrapf(ErrInvalidFormat, "Line %d has an invalid format", line)
 		}
 
+		logEntry["time"] = logEntry.MakeTimePretty("time")
 		result = append(result, logEntry)
 	}
 

@@ -6,6 +6,7 @@ import (
 	"mime/multipart"
 	"net/http"
 	"path/filepath"
+	"strconv"
 
 	"github.com/adampresley/logrusviewer/pkg/logfiles"
 	"github.com/adampresley/logrusviewer/pkg/logfiletypes"
@@ -114,4 +115,32 @@ func (c *ViewerController) ViewEntries(ctx echo.Context) error {
 	}
 
 	return ctx.Render(http.StatusOK, "mainLayout:viewer", viewState)
+}
+
+/*
+ViewEntry gets an individual line.
+
+	GET: /entry?logfile=file&lineNumber=1
+*/
+func (c *ViewerController) ViewEntry(ctx echo.Context) error {
+	var err error
+	var f io.Reader
+	var logEntries logfiles.ParsedLogFile
+
+	fileName := ctx.QueryParam("logfile")
+	parser := c.serviceFactory.Parser(logfiletypes.LogrusJSON)
+
+	lineNumber, _ := strconv.Atoi(ctx.QueryParam("lineNumber"))
+
+	if f, err = parser.Open(filepath.Join(logfiles.UPLOADS_FOLDER, fileName)); err != nil {
+		c.logger.Errorf("Error opening file %s with parser in ViewEntry: %s", fileName, err.Error())
+		return ctx.String(http.StatusInternalServerError, "Error opening log file")
+	}
+
+	if logEntries, err = parser.Parse(f); err != nil {
+		c.logger.Errorf("Error parsing log file %s in ViewEntry: %s", fileName, err.Error())
+		return ctx.String(http.StatusInternalServerError, "Error parsing log file")
+	}
+
+	return ctx.JSON(http.StatusOK, logEntries.GetLine(lineNumber))
 }

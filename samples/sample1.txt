@@ -81,6 +81,7 @@
 {"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:08-06:00","who":"SMTP Server Pool"}
 {"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:08-06:00","who":"MailSlurper"}
 {"level":"info","msg":"Mail item 770a551f-5b88-4c36-6ee1-ebb494e6d65a written","time":"2018-01-31T21:02:08-06:00","who":"Database Receiver"}
+{"level":"error","msg":"Test error!","time":"2018-01-31T21:02:09-06:00","who":"Database Receiver"}
 {"level":"info","msg":"Shutting down receiver channel...","time":"2018-01-31T21:02:13-06:00","who":"SMTP Listener"}
 {"level":"info","msg":"Shutting down HTTP admin listener","time":"2018-01-31T21:02:13-06:00","who":"MailSlurper"}
 {"level":"info","msg":"Shutting down receiver channel...","time":"2018-01-31T21:02:13-06:00","who":"SMTP Listener"}

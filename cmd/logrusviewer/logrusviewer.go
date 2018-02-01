@@ -66,6 +66,7 @@ func main() {
 	handlers.GET("/", viewerController.ViewEntries)
 	handlers.GET("/selectlogfile", viewerController.SelectLogFile)
 	handlers.POST("/postselectlogfile", viewerController.PostSelectLogFile)
+	handlers.GET("/entry", viewerController.ViewEntry)
 
 	go func() {
 		var err error

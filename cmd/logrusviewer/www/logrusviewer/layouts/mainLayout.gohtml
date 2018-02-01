@@ -30,7 +30,7 @@
 		</div>
 	</header>
 
-	<div id="content-wrapper">
+	<div id="content-wrapper" class="mui-container-fluid">
 		<div class="mui--appbar-height"></div>
 		<br />
 
@@ -44,8 +44,13 @@
 	</footer>
 
 	<script src="/www/npo/npo.js"></script>
+	<script src="/www/qwest/qwest.js"></script>
 	<script src="/www/handlebars/handlebars-v4.0.11.js"></script>
-	<script type="text/javascript" src="/www/mui/js/mui.min.js"></script>
+	<script src="/www/mui/js/mui.min.js"></script>
+
+	<script src="/www/logrusviewer/js/services/TemplateService.js"></script>
+	<script src="/www/logrusviewer/js/services/LogFileService.js"></script>
+
 	{{template "js" .}}
 </body>
 </html>

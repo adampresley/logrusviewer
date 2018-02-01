@@ -9,28 +9,43 @@
 {{end}}
 
 {{if .LogEntries}}
-<table class="mui-table">
-	<thead>
-		<tr>
-			<th>Level</th>
-			<th>Time</th>
-			<th>Message</th>
-		</tr>
-	</thead>
-	<tbody>
-		{{range .LogEntries}}
+	<table class="mui-table log-table-header">
+		<thead>
 			<tr>
-				<td>{{index . "level"}}</td>
-				<td>{{index . "time"}}</td>
-				<td>{{index . "msg"}}</td>
+				<th style="width: 4%;">#</th>
+				<th style="width: 8%;">Level</th>
+				<th style="width: 13%;">Time</th>
+				<th style="width: 75%;">Message</th>
 			</tr>
-		{{end}}
-	</tbody>
-</table>
+		</thead>
+	</table>
+
+	<table class="mui-table log-table-contents">
+		<tbody>
+			{{range .LogEntries}}
+				<tr>
+					{{$level := index . "level"}}
+					{{$lineNumber := index . "lineNumber"}}
+
+					<td style="width: 4%;"><a href="javascript:void" class="logEntryLink" data-lineNumber="{{$lineNumber}}">{{$lineNumber}}</a></td>
+					<td style="width: 8%;" class="{{if eq $level "error"}}mui--bg-danger{{end}}">{{$level}}</td>
+					<td style="width: 13%;">{{index . "time"}}</td>
+					<td style="width: 75%;">{{index . "msg"}}</td>
+				</tr>
+			{{end}}
+		</tbody>
+	</table>
+
+	<div class="log-detail-panel" id="detailPanel"></div>
 {{else}}
-<p>Please select a log file to parse!</p>
+	<p>Please select a log file to parse!</p>
 {{end}}
 {{end}}
 
 {{define "js"}}
+	<script>
+		window.logFile = "{{.LogFile}}";
+	</script>
+
+	<script src="/www/logrusviewer/js/controllers/ViewerController.js"></script>
 {{end}}
