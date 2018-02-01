@@ -43,7 +43,7 @@ func main() {
 	flag.Parse()
 
 	logger = logging.GetLogger(*logLevel, "Logrus Viewer")
-	logger.Infof("Starting server v%s", SERVER_VERSION)
+	logger.Infof("Starting server v%s on %s", SERVER_VERSION, *host)
 
 	renderer = ui.NewTemplateRenderer(DEBUG_ASSETS)
 	setupFactory()
