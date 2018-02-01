@@ -27,7 +27,7 @@ const (
 	SERVER_VERSION string = "0.1.0"
 
 	// Set to true while developing
-	DEBUG_ASSETS bool = true
+	DEBUG_ASSETS bool = false
 )
 
 var logger *logrus.Entry
