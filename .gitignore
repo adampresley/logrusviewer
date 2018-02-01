@@ -4,6 +4,7 @@
 *.so
 *.dylib
 .DS_Store
+cmd/logrusviewer/uploads/*
 
 # Test binary, build with `go test -c`
 *.test

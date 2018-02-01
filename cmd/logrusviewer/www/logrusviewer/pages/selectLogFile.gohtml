@@ -2,7 +2,15 @@
 {{end}}
 
 {{define "body"}}
-<form class="mui-form" name="frmLoad" id="frmLoad" method="POST" action="/postselectlogfile">
+{{if .Message}}
+	{{if .IsError}}
+		<div class="mui-panel error-panel">
+			{{.Message}}
+		</div>
+	{{end}}
+{{end}}
+
+<form class="mui-form" name="frmLoad" id="frmLoad" method="POST" action="/postselectlogfile" enctype="multipart/form-data">
 	<legend>Select Log File</legend>
 
 	<div class="mui-textfield">

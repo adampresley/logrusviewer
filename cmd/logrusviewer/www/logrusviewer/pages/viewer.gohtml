@@ -2,7 +2,34 @@
 {{end}}
 
 {{define "body"}}
-<p>This is a test!</p>
+{{if .Message}}
+	{{if .IsError}}
+		<div class="mui-panel error-panel">{{.Message}}</div>
+	{{end}}
+{{end}}
+
+{{if .LogEntries}}
+<table class="mui-table">
+	<thead>
+		<tr>
+			<th>Level</th>
+			<th>Time</th>
+			<th>Message</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{range .LogEntries}}
+			<tr>
+				<td>{{index . "level"}}</td>
+				<td>{{index . "time"}}</td>
+				<td>{{index . "msg"}}</td>
+			</tr>
+		{{end}}
+	</tbody>
+</table>
+{{else}}
+<p>Please select a log file to parse!</p>
+{{end}}
 {{end}}
 
 {{define "js"}}

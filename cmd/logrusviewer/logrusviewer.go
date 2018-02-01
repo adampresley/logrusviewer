@@ -16,6 +16,7 @@ import (
 
 	"github.com/adampresley/logrusviewer/cmd/logrusviewer/controllers"
 	"github.com/adampresley/logrusviewer/cmd/logrusviewer/www"
+	"github.com/adampresley/logrusviewer/pkg/factories"
 	"github.com/adampresley/logrusviewer/pkg/logging"
 	"github.com/adampresley/logrusviewer/pkg/ui"
 	"github.com/sirupsen/logrus"
@@ -31,6 +32,7 @@ const (
 
 var logger *logrus.Entry
 var renderer *ui.TemplateRenderer
+var serviceFactory *factories.ServiceFactory
 
 var viewerController *controllers.ViewerController
 
@@ -44,6 +46,7 @@ func main() {
 	logger.Infof("Starting server v%s", SERVER_VERSION)
 
 	renderer = ui.NewTemplateRenderer(DEBUG_ASSETS)
+	setupFactory()
 	setupControllers()
 
 	handlers = echo.New()
@@ -62,6 +65,7 @@ func main() {
 
 	handlers.GET("/", viewerController.ViewEntries)
 	handlers.GET("/selectlogfile", viewerController.SelectLogFile)
+	handlers.POST("/postselectlogfile", viewerController.PostSelectLogFile)
 
 	go func() {
 		var err error
@@ -83,6 +87,10 @@ func main() {
 	}
 }
 
+func setupFactory() {
+	serviceFactory = factories.NewServiceFactory(*logLevel)
+}
+
 func setupControllers() {
-	viewerController = controllers.NewViewerController(logging.GetLogger(*logLevel, "Viewer Controller"))
+	viewerController = controllers.NewViewerController(logging.GetLogger(*logLevel, "Viewer Controller"), serviceFactory)
 }

@@ -823,16 +823,18 @@ aaS+dz0k+VVS+EE02J0lHvADfp9O7xkCYfF/AwAA///RNpECnYsCAA==
 
 	"/www/logrusviewer/css/style.css": {
 		local:   "www/logrusviewer/css/style.css",
-		size:    732,
-		modtime: 1517379807,
+		size:    1070,
+		modtime: 1517452985,
 		compressed: `
-H4sIAAAAAAAC/3xS0Y6bMBB8xl9hKarUInzhqt4LvPWkqu/3BTbewCrGi+xFkET998pAclSRqgTJjHdm
-Z3Y55rmQufxJ9iLfPz6EzI+i494VwiToJrIOsO24kq9l+aUWf8TuuhDoh5ELwTCzDqALYUZm8jER1QTm
-jKxO5FnFnog79G0ltWfUDnUEW4tM9XRVFOensjboS2y0g1pkSV/FTluaKvk6zI8ntEZ/LQu5/V/K8se3
-xaTYgv0GbSF8RltfbyIbKCIj+UqecF6cMA2VLGuRhTVwOjo4baerQm9hruT3dQir0Ohe+hGVw8hKoXfo
-IYn3OrTolSFm6hf+J0WngoYchUpOHTLsL1kbtyhMaLnbDf2e5508g+dHoEOzAmoKehjWaD169e/WRHbM
-ZWRszhd5ImIIiZsZmlXE6zJuQ8FCUIbm+sm/eiuHBA/aWvTtA1/hnbtfq/bd3Nbq9p9Od59bB6Obcxto
-9FZtIzoApC9gIy07SouP5NDKA5Tpt7O2Frwtvv4GAAD//0PTAd3cAgAA
+H4sIAAAAAAAC/3yS226jPBDHr/FTWIo+6dsoTkg3tBW520qrve8T+DCAVeNB9qCQVn33lYEcdlmVg2TG
+M3///jPs1mvG1/wHmjN/eX1lfL1jDbVuw1QKfbCsAVs3VPJ9nv93ZJ/sbnvDrO962jCCgWQAuWGqJ0If
+U6E4gXqzJCr0JGKLSI31dcmlJyudlRHMkWWixXeBcVik1UGeo5YOjixL+iI20uCp5PtuuL6hVvL/fMPn
+Z5vnh28jJJuN/QJpINysTZ8fLOswWrLoS17ZYSQh7EqeH1kWJsNp6aCaV+/CegNDyR+mJkxCvdu2vRXO
+RhLCemc9JPFWhtp6oZAI27H+ViJTgkaHoeSnxhLcb5JUblQ4WUPNXdMvfl7QE3i6GlrpKSBOQXbdZK21
+Xvw5NZbt1jyS1W9nXiEShFSbKRxEtO9juxUGA0EoHI4LflHkXQp30hjr62t8Ct/R/Zy0L3DzUR9fnHTh
+nE9QUr/VAXtvxNyiFUD6A+aicUZp8BGdNXwFebrv0KaE4o7ri4u99JGw5ZHODiL7MnfHthACBtFJD270
+tGStns2TkcfrfFdPD3v9cLjxXxML/ajVyLi1vsKb6iUjzw/5c/HvlmgNRVUtVdWzkSmeVGOvNcS4FN4X
+xdOEtBQ2BzAj/1/C+js8asU+fwcAAP//zF7vbS4EAAA=
 `,
 	},
 
@@ -858,24 +860,28 @@ qQbrU7eObSpFeud/BQAA///bFHbx9wUAAA==
 
 	"/www/logrusviewer/pages/selectLogFile.gohtml": {
 		local:   "www/logrusviewer/pages/selectLogFile.gohtml",
-		size:    375,
-		modtime: 1517380395,
+		size:    519,
+		modtime: 1517453267,
 		compressed: `
-H4sIAAAAAAAC/2yQzWqFMBCF1+YpwuwlLxBd3tWFFuwLqDOxU/IjZrz0Ir57iZXWQlfh5MyZ+TjbhuQ4
-koYxZ9h3tW0Ucd+V+nWGhM9iWZeWoEff59xAWLkuGnTsAzXglnBPPYJmvIhA8p6wgdeX7g10Pwqn2ICZ
-U5ZMnkbxaXLsCVpVWU8TRWy7w9D3NOkbe7Lm/FeqssiPK4DQpzgmjyVfWY7zKlqec+EpW082n6bbIQvb
-jzDlpkF+HJuHVSTFM5zXIbDA9dQgUZ9vXS89Z0Jou2POmu9wq6wplbT/lfjxp92vAAAA//+nVbNcdwEA
-AA==
+H4sIAAAAAAAC/2xR3WrsIBC+1qeQuc/JC5jcnYXClha2L2DiJJ1iNOhk6RLy7sW4bFPaK/1mnO/HWVeL
+A3lU0KcE2ybXFb3dNim/O12wt9KiQf17xpTMiNsmRSk8pf8xhpgLQlu6qt6ZlBqYFqpm49EpzP1yh1YK
+Idb1SCN0benaZr6i/fCghxCnI1/GoLyZsIEhTudgLCiyBzAhvwfbwOvL5Q2U6ZmCb6CeQ+KEDnt2YRzI
+ISj0Pd9mzMSOaTaR60xfWcMm29QOR/S2vexj6hxGdSKHur7XpfwVl/GTB0Jn95ia/LywKiJFszh3YTzt
+MDt/gDprlp+QQncLc/D34bR0EzEcpTr26n5WVTSU0EJ72d/pugy3Uu+J2r+W+vFj218BAAD///g/aG4H
+AgAA
 `,
 	},
 
 	"/www/logrusviewer/pages/viewer.gohtml": {
 		local:   "www/logrusviewer/pages/viewer.gohtml",
-		size:    100,
-		modtime: 1517376981,
+		size:    544,
+		modtime: 1517459655,
 		compressed: `
-H4sIAAAAAAAC/6quTklNy8xLVVBKLi5Wqq3lqq5OzUupreXiQsgk5adUgqRsCuxCMjKLFTKLFRIVSlKL
-SxRt9AvssOnIQjEKEAAA//8RCZvbZAAAAA==
+H4sIAAAAAAAC/3ySQW6zMBCF1/gU83v/hwu43mVRKZW66AUcPBBXxiCPi1pZvns1OA2kiroCvgfvPc+Q
+s8XeBQTZEclSRM4YbClCbMp5sl9Vcj0cXpDIDFiKaCp4pmOMU2TQKOsW6LwhepLjh/s/m4AekPV6L3XO
+m4VqrVs0G9XQXTg7n6bhGFJ0SKUIlczZ4958BVKLRqULGqs5P0W+MNEnXNCrNl1u5M2NeAeuRX6YatfP
++bH6qcRnZynnaMKAvzo1W2KjktU5u2DxEw4gPadLPmKyD19IbsS/9JGGvXztdhsVg1pOtesgNE/PEy9G
+zfrVoyEEQo9dAgN+GqB3HiFNMJtI+E+1s3607fe73+A7AAD//9BoU+AgAgAA
 `,
 	},
 

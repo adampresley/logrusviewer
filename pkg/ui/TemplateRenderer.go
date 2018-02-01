@@ -37,22 +37,30 @@ func NewTemplateRenderer(debugMode bool) *TemplateRenderer {
 func (t *TemplateRenderer) Render(w io.Writer, name string, data interface{}, ctx echo.Context) error {
 	var tmpl *template.Template
 	var ok bool
+	var err error
 
 	if tmpl, ok = templates[name]; !ok {
 		return fmt.Errorf("Cannot find template %s", name)
 	}
 
-	return tmpl.ExecuteTemplate(w, "layout", data)
+	if err = tmpl.ExecuteTemplate(w, "layout", data); err != nil {
+		fmt.Printf("Error executing template %s: %s", name, err.Error())
+	}
+
+	return err
 }
 
 func (t *TemplateRenderer) LoadTemplates(debugMode bool) {
 	templates = make(map[string]*template.Template)
+	var err error
 
 	for _, fileName := range pageList {
 		trimmedName := strings.TrimSuffix(fileName, filepath.Ext(fileName))
 
-		templates["mainLayout:"+trimmedName], _ = template.Must(
+		if templates["mainLayout:"+trimmedName], err = template.Must(
 			template.New("layout").Parse(www.FSMustString(debugMode, "/www/logrusviewer/layouts/mainLayout.gohtml")),
-		).Parse(www.FSMustString(debugMode, "/www/logrusviewer/pages/"+fileName))
+		).Parse(www.FSMustString(debugMode, "/www/logrusviewer/pages/"+fileName)); err != nil {
+			panic("Error parsing template " + fileName + ": " + err.Error())
+		}
 	}
 }
