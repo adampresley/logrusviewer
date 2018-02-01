@@ -1,0 +1,86 @@
+{"level":"info","msg":"Starting MailSlurper Server v1.12.0","time":"2018-01-31T21:01:24-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Connecting to database","time":"2018-01-31T21:01:24-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Creating database tables...","time":"2018-01-31T21:01:24-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Created tables successfully.","time":"2018-01-31T21:01:24-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Worker pool configured for 1000 workers","time":"2018-01-31T21:01:24-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"SMTP listener running on localhost:2500","time":"2018-01-31T21:01:24-06:00","who":"SMTP Listener"}
+{"level":"info","msg":"1 receiver(s) listening","time":"2018-01-31T21:01:24-06:00","who":"SMTP Listener"}
+{"level":"info","msg":"HTTP admin listener running on localhost:8088","time":"2018-01-31T21:01:24-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Worker 1 queued to handle connections from 127.0.0.1:51710","time":"2018-01-31T21:02:01-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Reading data from client connection...","time":"2018-01-31T21:02:01-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Worker 2 queued to handle connections from 127.0.0.1:51712","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Reading data from client connection...","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:02-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Mail item 4d4534bc-628a-4734-665c-b2cd303a32de written","time":"2018-01-31T21:02:02-06:00","who":"Database Receiver"}
+{"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:02-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Mail item 4071456b-a543-46b4-7ffa-3e5b637d8f60 written","time":"2018-01-31T21:02:02-06:00","who":"Database Receiver"}
+{"level":"info","msg":"Worker 3 queued to handle connections from 127.0.0.1:51713","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Reading data from client connection...","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:02-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Mail item 75a7708e-63f5-495c-49d1-9d9d6245f775 written","time":"2018-01-31T21:02:02-06:00","who":"Database Receiver"}
+{"level":"info","msg":"Worker 4 queued to handle connections from 127.0.0.1:51714","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Reading data from client connection...","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Worker 5 queued to handle connections from 127.0.0.1:51715","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Reading data from client connection...","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:02-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Mail item 6eb6e4c0-45cb-47e6-600a-7d17370ab167 written","time":"2018-01-31T21:02:02-06:00","who":"Database Receiver"}
+{"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Worker 6 queued to handle connections from 127.0.0.1:51716","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Reading data from client connection...","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:02-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Mail item e5412bbf-90bf-4f57-5261-71048316c177 written","time":"2018-01-31T21:02:02-06:00","who":"Database Receiver"}
+{"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Worker 7 queued to handle connections from 127.0.0.1:51717","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Reading data from client connection...","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:02-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Mail item d7ad7053-c5de-4510-4a30-e5c3fa2338ea written","time":"2018-01-31T21:02:02-06:00","who":"Database Receiver"}
+{"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Worker 8 queued to handle connections from 127.0.0.1:51718","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Reading data from client connection...","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:02-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Mail item 51d318fd-72a1-47cc-7603-a6356997df47 written","time":"2018-01-31T21:02:02-06:00","who":"Database Receiver"}
+{"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Worker 9 queued to handle connections from 127.0.0.1:51719","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Reading data from client connection...","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:02-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Mail item 4536eda4-4b21-4f80-57a7-907ede009b11 written","time":"2018-01-31T21:02:02-06:00","who":"Database Receiver"}
+{"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Worker 10 queued to handle connections from 127.0.0.1:51720","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Reading data from client connection...","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:02-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Mail item 4dca0ad0-2f04-4fa1-4537-d856194a3b5c written","time":"2018-01-31T21:02:02-06:00","who":"Database Receiver"}
+{"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Worker 11 queued to handle connections from 127.0.0.1:51721","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Reading data from client connection...","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:02-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Mail item edf95c43-823f-4c00-75ce-51b9d339ba77 written","time":"2018-01-31T21:02:02-06:00","who":"Database Receiver"}
+{"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Worker 12 queued to handle connections from 127.0.0.1:51722","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Reading data from client connection...","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:02-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Mail item 884df0f0-8192-4336-6f88-80fe04da79f8 written","time":"2018-01-31T21:02:02-06:00","who":"Database Receiver"}
+{"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Worker 13 queued to handle connections from 127.0.0.1:51723","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Reading data from client connection...","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:02-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Mail item 27239a8e-7b00-4ea0-743e-08b21604fd4d written","time":"2018-01-31T21:02:02-06:00","who":"Database Receiver"}
+{"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:02-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:02-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Mail item f3b322cf-d8d4-47b7-65eb-86b55316cc9f written","time":"2018-01-31T21:02:02-06:00","who":"Database Receiver"}
+{"level":"info","msg":"Worker 14 queued to handle connections from 127.0.0.1:51741","time":"2018-01-31T21:02:06-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Reading data from client connection...","time":"2018-01-31T21:02:06-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:06-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:06-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Mail item e9f58eee-dcc7-4133-4662-9823799e3caf written","time":"2018-01-31T21:02:06-06:00","who":"Database Receiver"}
+{"level":"info","msg":"Worker 15 queued to handle connections from 127.0.0.1:51747","time":"2018-01-31T21:02:08-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"Reading data from client connection...","time":"2018-01-31T21:02:08-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"QUIT command received. Closing connection","time":"2018-01-31T21:02:08-06:00","who":"SMTP Server Pool"}
+{"level":"info","msg":"New mail item written to database.","time":"2018-01-31T21:02:08-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Mail item 770a551f-5b88-4c36-6ee1-ebb494e6d65a written","time":"2018-01-31T21:02:08-06:00","who":"Database Receiver"}
+{"level":"info","msg":"Shutting down receiver channel...","time":"2018-01-31T21:02:13-06:00","who":"SMTP Listener"}
+{"level":"info","msg":"Shutting down HTTP admin listener","time":"2018-01-31T21:02:13-06:00","who":"MailSlurper"}
+{"level":"info","msg":"Shutting down receiver channel...","time":"2018-01-31T21:02:13-06:00","who":"SMTP Listener"}
